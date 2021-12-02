@@ -1,1 +1,33 @@
-knw
+
+import java.util.*;
+ 
+import java.io.*;
+
+public class Third_Formula
+{  
+  int A = 0;
+  int B = 0;
+  
+  boolean end = false;
+  
+  public void formula( int command, int X, int Y, int n )
+  {
+    switch( command )
+    {
+      case 1: X = n;
+              break;
+      case 2: System.out.println( X );
+              break;
+      case 3: X += Y;
+              break;
+      case 4: X *= Y;
+              break;
+      case 5: X -= Y;
+              break;
+      case 6: X = ( int )( X/Y );
+              break;
+      case 7: end = true;
+              break;
+    }
+  }
+}
