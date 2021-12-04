@@ -6,13 +6,11 @@ import java.io.*;
 public class Third_Formula
 {  
 
-  public void formula( int command, int X, int Y, int n, boolean end )
+  public int formula( int command, int X, int Y, int n )
   {
     switch( command )
     {
       case 1: X = n;
-              break;
-      case 2: System.out.println( X );
               break;
       case 3: X += Y;
               break;
@@ -22,9 +20,8 @@ public class Third_Formula
               break;
       case 6: X = ( int )( X/Y );
               break;
-      case 7: end = true;
-              break;
     }
+    return X;
   }
   public static void main( String args[] )throws IOException
   {
@@ -34,47 +31,77 @@ public class Third_Formula
     
     int command;
     int n = 0;
+    int A = 0;
+    int B = 0;
     int X = 0;
     int Y = 0;
-
-    String third;
+    int result = 0;
+    
+    String second = "";
+    String third = "";
     
     while( end == false )
     {
-      int A = X;
-      int B = Y;
       System.out.println( "Input your code" );
       
       command = Integer.parseInt( scanner.next() );
       
-      if( scanner.next().equals("A") )
-      {
-        X = A;
-      }
+      if( command == 7 )
+        end = true;
       else
       {
-        X = B;
-      }
-      
-      third = scanner.next();
-      
-      if( third.equals("A") )
-      {
-        Y = A;
-      }
-      else if( third.equals("B") )
-      {
-        Y = B;
-      }
-      else
-      {    
-        n = Integer.parseInt( third );
+        second = scanner.next();
+        
+        if( second.equals("A") )
+        {
+          X = A;
+        }
+        else if( second.equals("B") )
+        {
+          X = B;
+        }
+        
+        if( command == 1 || command == 3 || command == 4 || command == 5 || command == 6 )
+        {
+          third = scanner.next();
+          
+          if( third.equals("A") )
+          {
+            Y = A;
+          }
+          else if( third.equals("B") )
+          {
+            Y = B;
+          }
+          else
+          {    
+            n = Integer.parseInt( third );
+          }
+        }
+        else
+        {
+          if( second.equals("A") )
+            System.out.println( A );
+          else
+            System.out.println( B );
+        }
       }
       
       Third_Formula formula = new Third_Formula();
       
-      formula.formula( command, X, Y, n, end );
+      result = formula.formula( command, X, Y, n );
       
+      second = scanner.next();
+        
+      if( second.equals("A") )
+      {
+        A = result;
+      }
+      else if( second.equals("B") )
+      {
+        B = result;
+      }
+        
       scanner.nextLine();
       
     }

@@ -3,21 +3,21 @@
   <project autorefresh="false" root="" work="">
     <createjar file=""/>
     <source>
-      <file active="true" name="Third_Formula.java" package="" timestamp="01-Dec-2021 23:00:21">
-        <select from="806" to="806"/>
-        <scroll column="492" row="0"/>
+      <file active="true" name="Third_Formula.java" package="" timestamp="03-Dec-2021 21:42:47">
+        <select from="1994" to="1994"/>
+        <scroll column="2128" row="0"/>
       </file>
       <file name="Formula.java" package="" timestamp="30-Oct-2021 22:19:26">
-        <select from="806" to="806"/>
-        <scroll column="492" row="0"/>
+        <select from="1994" to="1994"/>
+        <scroll column="2128" row="0"/>
       </file>
       <file name="Second_Formula.java" package="" timestamp="14-Nov-2021 16:45:25">
-        <select from="806" to="806"/>
-        <scroll column="492" row="0"/>
+        <select from="1994" to="1994"/>
+        <scroll column="2128" row="0"/>
       </file>
       <file name="Second_Formula_Improved.java" package="" timestamp="28-Nov-2021 22:03:41">
-        <select from="806" to="806"/>
-        <scroll column="492" row="0"/>
+        <select from="1994" to="1994"/>
+        <scroll column="2128" row="0"/>
       </file>
     </source>
     <included/>
