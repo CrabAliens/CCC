@@ -53,30 +53,20 @@ public class Third_Formula
         second = scanner.next();
         
         if( second.equals("A") )
-        {
           X = A;
-        }
         else if( second.equals("B") )
-        {
           X = B;
-        }
-        
+
         if( command == 1 || command == 3 || command == 4 || command == 5 || command == 6 )
         {
           third = scanner.next();
           
           if( third.equals("A") )
-          {
             Y = A;
-          }
           else if( third.equals("B") )
-          {
             Y = B;
-          }
-          else
-          {    
+          else   
             n = Integer.parseInt( third );
-          }
         }
         else
         {
@@ -90,17 +80,11 @@ public class Third_Formula
       Third_Formula formula = new Third_Formula();
       
       result = formula.formula( command, X, Y, n );
-      
-      second = scanner.next();
-        
+            
       if( second.equals("A") )
-      {
         A = result;
-      }
       else if( second.equals("B") )
-      {
         B = result;
-      }
         
       scanner.nextLine();
       
