@@ -5,32 +5,27 @@ import java.io.*;
 
 public class Fourth_Formula
 {  
-  public int formula( ArrayList<Integer> temps, int size )
+  public int formula( ArrayList<Integer> temps )
   {
-    int difference = temps.get(2) - temps.get(1);
-    int space = 0;
+    ArrayList<Integer> gaps = new ArrayList<Integer>();
     
-    boolean repeat = false;
+    ArrayList<Integer> pattern = new ArrayList<Integer>();
     
-    for( int i = 0; i <= temps.size() - 3; i++ )
+    for( int i = 2; i < temps.size(); i++ )
+      gaps.add( temps.get(i) - temps.get(i-1) );
+    
+    for( int j = 0; j < gaps.size(); j++ )        
     {
-      if( temps.get( i + 3 ) - temps.get( i + 2 ) = difference )
+      if( gaps.get( j ) == gaps.get( 0 ) )
       {
-        for( int j = 0; j <= temps.size() - i - 3; i++ )
+        for( int k = 0; k < j; k++ )
         {
-          if( temps.get( j + 3 ) - temps.get( j + 2 ) = difference )
-            repeat = false;
-          else
-            repeat = true;     
+          pattern.add( gaps.get( k ) );
         }
-        if( repeat == true )
-        {
-          //???????????????????? :(    
-      
+      }
     }
   }
-  
-
+      
   
   public static void main( String args[] )throws IOException
   {
