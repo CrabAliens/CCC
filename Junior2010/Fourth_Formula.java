@@ -13,33 +13,19 @@ public class Fourth_Formula
     
     boolean check = true;
     
-    for( int i = 2; i < temps.size(); i++ )
+    for( int i = 1; i < temps.size(); i++ )
       gaps.add( temps.get(i) - temps.get(i-1) );
-    
+    System.out.println( gaps );
     for( int j = 1; j < gaps.size(); j++ )
     {
       if( gaps.get(j) == gaps.get(0) )
       {
-        pattern.addAll( gaps.subList( 0, j - 1 ) );
+        pattern.addAll( gaps.subList( 0, j ) );
         
-        for( int l = 0; l <= gaps.size() - 3; l = l + 3 )
-        {  
-          check = true;
-          if( gaps.subList(j + l, j + l + pattern.size() - 1 ) != pattern )
-          {
-            check = false;
-            break;
-          }
-        }
-        if( check = true )
+        for( int k = pattern.size(); k < gaps.size(); k++ )
         {
-          for( int k = 0; k <= gaps.size() % pattern.size(); k++ )
-          {
-            if( gaps.subList( gaps.size() - pattern.size(), gaps.size() - pattern.size() + ( gaps.size() % pattern.size() ) ) == gaps.subList( 0, gaps.size() % pattern.size() ) )
-            {
-              return pattern.size();
-            }
-          }
+          if( gaps.get(k) != gaps.get(k % pattern.size()))
+            break;
         }      
       }
     }
