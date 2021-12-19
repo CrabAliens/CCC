@@ -15,7 +15,7 @@ public class Fourth_Formula
     
     for( int i = 1; i < temps.size(); i++ )
       gaps.add( temps.get(i) - temps.get(i-1) );
-    System.out.println( gaps );
+    
     for( int j = 1; j < gaps.size(); j++ )
     {
       if( gaps.get(j) == gaps.get(0) )
@@ -26,7 +26,8 @@ public class Fourth_Formula
         {
           if( gaps.get(k) != gaps.get(k % pattern.size()))
             break;
-        }      
+        }   
+        return pattern.size();
       }
     }
     return gaps.size();
@@ -35,22 +36,23 @@ public class Fourth_Formula
   
   public static void main( String args[] )throws IOException
   {
-    ArrayList< Integer > list = new ArrayList<>();
-    
-    System.out.println( "Input your list" );
+    while( 1 == 1 )
+    {
+      ArrayList< Integer > list = new ArrayList<>();
       
-    Scanner scanner = new Scanner( System.in );
+      System.out.println( "Input your list" );
       
-    int size = scanner.nextInt();
+      Scanner scanner = new Scanner( System.in );
       
-    for( int m = 1; m <= size; m++ )
-      list.add( scanner.nextInt() );
+      int size = scanner.nextInt();
       
-    System.out.println( list );
-    
-    Fourth_Formula code = new Fourth_Formula();
-    
-    System.out.println( code.formula( list ) );
+      for( int m = 1; m <= size; m++ )
+        list.add( scanner.nextInt() );
+      
+      Fourth_Formula code = new Fourth_Formula();
+      
+      System.out.println( code.formula( list ) );
+    }
   }
     
 }
