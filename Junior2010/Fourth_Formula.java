@@ -9,7 +9,7 @@ public class Fourth_Formula
   {
     ArrayList<Integer> gaps = new ArrayList<Integer>();
     
-    ArrayList<Integer> pattern = new ArrayList<Integer>();
+    ArrayList<Integer> pattern;
     
     boolean check = true;
     
@@ -20,14 +20,19 @@ public class Fourth_Formula
     {
       if( gaps.get(j) == gaps.get(0) )
       {
+        pattern = new ArrayList<Integer>();
         pattern.addAll( gaps.subList( 0, j ) );
         
         for( int k = pattern.size(); k < gaps.size(); k++ )
         {
           if( gaps.get(k) != gaps.get(k % pattern.size()))
+          {
+            check = false;
             break;
+          }
         }   
-        return pattern.size();
+        if( check == true )
+          return pattern.size();
       }
     }
     return gaps.size();
