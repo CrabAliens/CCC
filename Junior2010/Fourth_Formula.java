@@ -16,6 +16,9 @@ public class Fourth_Formula
     for( int i = 1; i < temps.size(); i++ )
       gaps.add( temps.get(i) - temps.get(i-1) );
     
+    if( gaps.size() == 1 && gaps.get(0) == 0 )
+      return 0;
+    
     for( int j = 1; j < gaps.size(); j++ )
     {
       if( gaps.get(j) == gaps.get(0) )
@@ -56,7 +59,10 @@ public class Fourth_Formula
       
       Fourth_Formula code = new Fourth_Formula();
       
-      System.out.println( code.formula( list ) );
+      if( code.formula( list ) != 0 )
+        System.out.println( code.formula( list ) );
+      else
+        break;
     }
   }
     
