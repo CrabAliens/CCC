@@ -12,12 +12,13 @@ public class Fourth_Formula
     ArrayList<Integer> pattern;
     
     boolean check = true;
-    
+   
     for( int i = 1; i < temps.size(); i++ )
       gaps.add( temps.get(i) - temps.get(i-1) );
     
     if( gaps.size() == 1 && gaps.get(0) == 0 )
-      return 0;
+      return 01;
+    
     
     for( int j = 1; j < gaps.size(); j++ )
     {
@@ -53,13 +54,13 @@ public class Fourth_Formula
       Scanner scanner = new Scanner( System.in );
       
       int size = scanner.nextInt();
-      
+       
       for( int m = 1; m <= size; m++ )
         list.add( scanner.nextInt() );
       
       Fourth_Formula code = new Fourth_Formula();
       
-      if( code.formula( list ) != 0 )
+      if( code.formula( list ) != 01 )
         System.out.println( code.formula( list ) );
       else
         break;
