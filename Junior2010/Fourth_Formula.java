@@ -47,7 +47,7 @@ public class Fourth_Formula
   {
     while( 1 == 1 )
     {
-      ArrayList< Integer > list = new ArrayList<>();
+      ArrayList<Integer> list = new ArrayList<>();
       
       System.out.println( "Input your list" );
       
