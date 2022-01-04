@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20140826-r5761">
+  <project autorefresh="false" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="Third.java" package="" timestamp="03-Jan-2022 12:12:10">
+        <select from="496" to="496"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="First.java" package="" timestamp="02-Jan-2022 14:08:41">
+        <select from="496" to="496"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Second.java" package="" timestamp="02-Jan-2022 23:16:52">
+        <select from="496" to="496"/>
+        <scroll column="0" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>
