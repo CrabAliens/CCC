@@ -6,7 +6,7 @@ public class Third
 {
   public int formula( int first, int second, int count )
   {
-    if( first - second < second )
+    if( first - second <= second )
       count += 1;
     else
       return count;
