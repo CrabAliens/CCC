@@ -8,7 +8,7 @@ public class Fourth
   {     
     System.out.println( direction );
     
-    if( direction == "l" )
+    if( direction.equals("l") )
     {
       for( int i = 0; i < map.size(); i = i + 2 )
       {
@@ -22,9 +22,8 @@ public class Fourth
         }
       }
     }
-    if( direction == "r" )
+    if( direction.equals("r") )
     {
-      System.out.println("Yup!");
       for( int i = 0; i < map.size(); i = i + 2 )
       {
         if( map.get(( map.size() - 2 )) + amount <= map.get(i) )
@@ -37,7 +36,7 @@ public class Fourth
         }
       }
     }
-    if( direction == "u" )
+    if( direction.equals("u") )
     {
       for( int i = 1; i < map.size(); i = i + 2 )
       {
@@ -54,7 +53,7 @@ public class Fourth
         }
       }
     }
-    if( direction == "d" )
+    if( direction.equals("d") )
     {
       for( int i = 1; i < map.size(); i = i + 2 )
       {
