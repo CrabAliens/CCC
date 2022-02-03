@@ -18,76 +18,75 @@ public class Fourth
   {
     if( dir.equals( "l" ) )
     {
-      for( int i = 1; i <= amount; i++ )
+      map.add( map.get( map.size() - 2 ) + amount );
+      map.add( map.get( map.size() - 1 ) );
+    }
+    for( int i = 0; i < map.size() - 2; i = i + 2 )
+    {
+      if( map.get( i ) == map.get( map.size() - 2 ) )
       {
-        map.add( map.get( map.size() - 2 ) + i );
-        map.add( map.get( map.size() - 1 ) );
+        end = true;
+        return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
       }
-      for( int j = 0; j < ( map.size() - 2 ); j = j + 2 )
+      else
       {
-        if( map.get( j ) == map.get( map.size() - 2 ) )
-        {
-          end = true;
-          return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
-        }
-        else
+          end = false;
           return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " safe" );
       }
     }
-
     if( dir.equals( "r" ) )
     {
-      for( int i = 1; i <= amount; i++ )
+      System.out.println( amount );
+      System.out.println( map.get( map.size() - 2 ));      
+      map.add( map.get( map.size() - 2 ) - amount );
+      map.add( map.get( map.size() - 1 ) );
+    }
+    for( int i = 0; i < map.size() - 2; i = i + 2 )
+    {
+      if( map.get( i ) == map.get( map.size() - 2 ) )
       {
-        map.add( map.get( map.size() - 2 ) - i );
-        map.add( map.get( map.size() - 1 ) );
+        end = true;
+        return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
       }
-      for( int j = 0; j < ( map.size() - 2 ); j = j + 2 )
+      else
       {
-        if( map.get( j ) == map.get( map.size() - 2 ) )
-        {
-          end = true;
-          return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
-        }
-        else
+          end = false;
           return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " safe" );
       }
     }
-
     if( dir.equals( "u" ) )
     {
-      for( int i = 1; i <= amount; i++ )
+      map.add( map.get( map.size() - 2 ) );
+      map.add( map.get( map.size() - 1 ) + amount );
+    }
+    for( int i = 1; i < map.size() - 1; i = i + 2 )
+    {
+      if( map.get( i ) == map.get( map.size() - 1 ) )
       {
-        map.add( map.get( map.size() - 2 ) );
-        map.add( map.get( map.size() - 1 ) + i );
+        end = true;
+        return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
       }
-      for( int j = 1; j < ( map.size() - 2 ); j = j + 2 )
+      else
       {
-        if( map.get( j ) == map.get( map.size() - 2 ) )
-        {
-          end = true;
-          return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
-        }
-        else
+          end = false;
           return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " safe" );
       }
     }
-    
     if( dir.equals( "d" ) )
     {
-      for( int i = 1; i <= amount; i++ )
+      map.add( map.get( map.size() - 2 ) );
+      map.add( map.get( map.size() - 1 ) - amount );
+    }
+    for( int i = 1; i < map.size() - 1; i = i + 2 )
+    {
+      if( map.get( i ) == map.get( map.size() - 1 ) )
       {
-        map.add( map.get( map.size() - 2 ) );
-        map.add( map.get( map.size() - 1 ) - i );
+        end = true;
+        return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
       }
-      for( int j = 1; j < ( map.size() - 2 ); j = j + 2 )
+      else
       {
-        if( map.get( j ) == map.get( map.size() - 2 ) )
-        {
-          end = true;
-          return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " DANGER" );
-        }
-        else
+          end = false;
           return ( Integer.toString( map.get( map.size() - 2 ) ) + ", " + Integer.toString( map.get( map.size() - 1 ) ) + " safe" );
       }
     }
@@ -113,7 +112,7 @@ public class Fourth
     
     Scanner scanner = new Scanner( System.in );
           
-    if( code.end == false )
+    while( code.end == false )
       System.out.println( code.formula( scanner.next(), scanner.nextInt() ));
   }
   
