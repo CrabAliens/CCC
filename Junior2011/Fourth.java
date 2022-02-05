@@ -26,11 +26,16 @@ public class Fourth
     }
     if( l_r == 1 || l_r == -1 )
     {
+      int a = 0;
+      if( l_r == -1 && amount == 1 )
+        a = 1;
       for( int c = map.size() - ( amount * 2 ) - 2; c < map.size() - 1; c += 2 )
       {  
-        for( int j = 0; j < map.size() - 1 - ( amount * 2 ) - 1; j += 2 )
-        {
-          if( map.get( j ) == map.get( c ) && map.get( j + 1 ) == map.get( c + 1 ) )
+        for( int j = 0; j < map.size() - ( amount * 2 ) - 2; j += 2 )
+        {          
+          if( j == 856 && c == 862 )
+            a = 2;
+          if( map.get( j ).intValue() == map.get( c ).intValue() && map.get( j + 1 ).intValue() == map.get( c + 1 ).intValue() )
             return -1;
         }
       }
@@ -40,9 +45,9 @@ public class Fourth
     {
       for( int c = map.size() - ( amount * 2 ) - 1; c < map.size(); c += 2 )
       {  
-        for( int j = 1; j < map.size() - ( amount * 2 ); j += 2 )
+        for( int j = 1; j < map.size() - ( amount * 2 ) - 1; j += 2 )
         {
-          if( map.get( j ) == map.get( c ) && map.get( j + 1 ) == map.get( c + 1 ) )
+          if( map.get( j ).intValue() == map.get( c ).intValue() && map.get( j - 1 ).intValue() == map.get( c - 1 ).intValue() )
             return -1;
         }
       }
