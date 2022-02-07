@@ -1,0 +1,12 @@
+import java.util.*;
+
+import java.io.*;
+
+public class Third
+{
+  public String formula( one, two, three, four, five )
+  {
+    switch
+      case ( one + two )% 2 == 1;
+    
+      
