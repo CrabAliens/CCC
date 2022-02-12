@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+
+public class Third
+{
+  public ArrayList<Integer> drops = new ArrayList<Integer>();
+  public String formula()
+  {
+    leftmost_x = 0;
+    rightmost_x = 0;
+    upmost_y = 0;
+    downmost_y = 0;
+    
+    for( int i = 0; i < drops.size() - 1; i += 2 )
+    {
+      if( map.get( i ) > leftmost_x )
+        leftmost_x = map.get( i );
+      if( map.get( i ) < rightmost_x )
+        rightmost_x = map.get( i );
+    }
+    for( int i = 1; i < drops.size(); i += 2 )
+    {
+      if( map.get( i ) > upmost_y )
+        upmost_x = map.get( i );
+      if( map.get( i ) < downmost_y )
+        downmost_x = map.get( i );
+    }
+    return ( leftmost_x + 1 ).toString() + "," + ( downmost_y - 1 ).toString() + "\n" + ( rightmost_x - 1 ).toString() + "," + ( upmost_y + 1 ).toString();
+  }
+  public static void main( String args[] )throws IOException
+  {
+    Scanner scanner = new Scanner( System.in );
+    
+    Third code = new Third();
+    
+    for( int c = 0; c < scanner.nextInt; c++ )
+    {
+      code.map.add( scanner.nextInt );
+      code.map.add( scanner.nextInt );
+    }
+    
+    System.out.println( code.formula() );
+  }
+}

@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+public class Second
+{
+  public int formula( int p, int n, int r )
+  {
+    int d = 1;
+    int i = n;
+   
+    while( i <= p )
+    {
+      d += 1;
+      i += r;
+    }
+    
+    return d;
+  }
+  public static void main( String args[] )throws IOException
+  {
+    Scanner scanner = new Scanner( System.in );
+    
+    Second code = new Second()
+      
+    while( true )
+      System.out.println( code.formula( scanner.nextInt, scanner.nextInt, scanner.nextInt ) );
+  }
+}
