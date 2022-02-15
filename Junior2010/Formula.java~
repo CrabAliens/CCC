@@ -9,11 +9,19 @@ public class Formula
   public void convert( int i )
   {
     if( i > 5 )
+    {
       i = 10-i;
+    }
+    
     if( i % 2 == 0 )
+    {
       System.out.println( ( i + 2 )/2 );
+    }
+    
     else
+    {
       System.out.println( ( i + 1 )/2 );
+    }
   }
 
   public static void main( String args[] ) throws IOException
@@ -27,9 +35,11 @@ public class Formula
   
       Scanner scanner = new Scanner( System.in );
   
+      i = scanner.nextInt();
+  
       Formula formula = new Formula();
   
-      formula.convert( scanner.nextInt() );
+      formula.convert( i );
     }
   }
 }

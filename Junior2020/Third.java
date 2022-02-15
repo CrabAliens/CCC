@@ -37,8 +37,6 @@ public class Third
     int N = scanner.nextInt();
     
     String[] trash = new String[N * 2];
-      
-    ArrayList<String> better_trash = new ArrayList<String>();
     
     for( int c = 0; c < N * 2; c += 2 )
     {
