@@ -7,12 +7,11 @@ public class Third
   {
     ArrayList<Integer> stops = new ArrayList<Integer>();
     ArrayList<String> symbols = new ArrayList<String>();
-    
-    stops.add( 0 );
-    symbols.add( "a" );
+
+    symbols.add( uncompressed.get( 0 ) );
     int counter = 0;
     
-    for( int i = 0; i < uncompressed.size(); i++ )
+    for( int i = 1; i < uncompressed.size(); i++ )
     {
       int x = 0;
       for( int c = 0; c < stops.size(); c++ )
@@ -29,7 +28,6 @@ public class Third
       }
     }
     stops.add( counter + 1 );
-    stops.remove( 0 );
     
     uncompressed.clear();
     for( int j = 0; j < symbols.size(); j++ )
@@ -56,7 +54,7 @@ public class Third
       ArrayList<Integer> stops = code.formula( returned );
       
       for( int l = 0; l < stops.size(); l++ )
-        System.out.print( stops.get( l ) + returned.get( l )  );
+        System.out.print( stops.get( l ) + " " + returned.get( l ) + " " );
       
       System.out.print( "\n" );  
         
