@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;
+
+public class Second
+{
+  public static void main( String args[] )throws IOException
+  {
+    Scanner scanner = new Scanner( System.in );
+    
+    Second code = new Second();
+    
+    for( int i = 0; i < scanner.nextInt(); i++ )
+    {
+      for( int j = 0; j < scanner.nextInt(); j++ )
+        System.out.print( scanner.next() );
+    }
+  }
+}
