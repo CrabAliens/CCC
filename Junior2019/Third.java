@@ -9,26 +9,27 @@ public class Third
     ArrayList<String> symbols = new ArrayList<String>();
     
     stops.add( 0 );
-    symbols.add( uncompressed.get( 0 ) );
-    
-    int counter = 1;
+    symbols.add( "a" );
+    int counter = 0;
     
     for( int i = 0; i < uncompressed.size(); i++ )
     {
-      int x = stops.get( stops.size() - 1 ).intValue();
+      int x = 0;
+      for( int c = 0; c < stops.size(); c++ )
+        x += stops.get( c ).intValue();
+      
       if( uncompressed.get( i ).equals( uncompressed.get( x ) ) )
-      {
         counter += 1;
-      }
       else
       {
-        stops.add( counter - 1 );
+        counter += 1;
+        stops.add( counter );
         counter = 0;
         symbols.add( uncompressed.get( i ) );
       }
     }
     stops.add( counter + 1 );
-    stops.remove(0);
+    stops.remove( 0 );
     
     uncompressed.clear();
     for( int j = 0; j < symbols.size(); j++ )
