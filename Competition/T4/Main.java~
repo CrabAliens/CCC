@@ -1,0 +1,27 @@
+import java.util.*;
+import java.io.*;
+
+public class Main
+{
+  ArrayList<String[]> together = new ArrayList<String[]>();
+  ArrayList<String[]> apart = new ArrayList<String[]>();
+  ArrayList<String[]> groups = new ArrayList<String[]>();
+  
+  public static void main( String [] args )throws Exception
+  {
+    Scanner scanner = new Scanner( System.in );
+    Main code = new Main();
+    
+    int tp = scanner.nextInt();
+    for( int i = 0; i < tp; i++ )
+      together.add( new String[]{ scanner.next(), scanner.next() } );
+    
+    int ap = scanner.nextInt();
+    for( int i = 0; i < ap; i++ )
+      apart.add( new String[]{ scanner.next(), scanner.next() } );
+    
+    int g = scanner.nextInt();
+    for( int i = 0; i < g; i++ )
+      groups.add( new String[]{ scanner.next(), scanner.next(), scanner.next() } );
+  }
+}
