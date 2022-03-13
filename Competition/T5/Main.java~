@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+
+public class Main
+{
+  public int formula( int map_side, ArrayList<List> trees )
+  {
+  }
+  public static void main( String [] args ) throws Exception
+  {
+    Scanner scanner = new Scanner( System.in );
+    Main code = new Main();
+    
+    int side = Scanner.nextInt();
+    
+    int counter = Scanner.nextInt();
+    int[][] trees = new int[ counter ][ 2 ];
+    for( int i = 0; i < counter; i++ )
+    {
+      trees[i][0] = Scanner.nextInt();
+      trees[i][1] = Scanner.nextInt();
+    }
+    System.out.println( code.formula( side, trees ) );
+      
+      
