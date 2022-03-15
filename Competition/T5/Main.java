@@ -11,18 +11,20 @@ public class Main
       {
         for( int m = 0; m < map_side - i + 1; m++ )
         {
-          int right_top_corner_x = 1 + j;
-          int right_top_corner_y = 1 + m;
-          int left_bottom_corner_x = 1 + i + j;
-          int left_bottom_corner_y = 1 + i + m;
+          int right_top_corner_x = j + i ;
+          int right_top_corner_y = m + i;
+          int left_bottom_corner_x = j + 1;
+          int left_bottom_corner_y = m + 1;
+          
+          boolean flag = false;
           
           for( int l = 0; l < list_size; l++ )
           {
-            if( trees[l][0] > right_top_corner_x && trees[l][1] > right_top_corner_y && trees[l][0] < left_bottom_corner_x && trees[l][1] < left_bottom_corner_y  )
-              continue;
-            else
-              return i - 1;
+            if( trees[l][0] <= right_top_corner_x && trees[l][1] <= right_top_corner_y && trees[l][0] >= left_bottom_corner_x && trees[l][1] >= left_bottom_corner_y  )
+              flag = true;
           }
+          if( flag == false )
+            return i;
         }
       }
     }
